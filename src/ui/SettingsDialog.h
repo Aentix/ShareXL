@@ -8,6 +8,7 @@ class QLineEdit;
 class QSpinBox;
 class QFontComboBox;
 class QPushButton;
+class QComboBox;
 
 class SettingsDialog : public QDialog {
     Q_OBJECT
@@ -22,6 +23,7 @@ private:
     QSpinBox *fontSizeSpin;
     QPushButton *bgColorButton;
     QLineEdit *saveDirEdit;
+    QComboBox *toolbarStyleCombo;
 
     QColor drawColor;
     QColor textBackground;

@@ -26,6 +26,7 @@ Config Config::load() {
     const QString defaultSaveDir =
         QStandardPaths::writableLocation(QStandardPaths::PicturesLocation) + "/Screenshots";
     config.saveDirectory = settings.value("saveDirectory", defaultSaveDir).toString();
+    config.classicToolbar = settings.value("classicToolbar", config.classicToolbar).toBool();
 
     return config;
 }
@@ -38,4 +39,5 @@ void Config::save() const {
     settings.setValue("textFontSize", textFontSize);
     settings.setValue("textBackground", textBackground.name(QColor::HexArgb));
     settings.setValue("saveDirectory", saveDirectory);
+    settings.setValue("classicToolbar", classicToolbar);
 }

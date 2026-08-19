@@ -1,6 +1,7 @@
 #include "ui/SettingsDialog.h"
 
 #include <QColorDialog>
+#include <QComboBox>
 #include <QDialogButtonBox>
 #include <QFileDialog>
 #include <QFontComboBox>
@@ -40,6 +41,12 @@ SettingsDialog::SettingsDialog(const Config &initial, QWidget *parent)
     bgColorButton->setFixedWidth(50);
     connect(bgColorButton, &QPushButton::clicked, this, &SettingsDialog::pickBgColor);
     form->addRow("Text background", bgColorButton);
+
+    toolbarStyleCombo = new QComboBox();
+    toolbarStyleCombo->addItem("Modern");
+    toolbarStyleCombo->addItem("Classic");
+    toolbarStyleCombo->setCurrentIndex(initial.classicToolbar ? 1 : 0);
+    form->addRow("Toolbar style", toolbarStyleCombo);
 
     auto *saveDirRow = new QHBoxLayout();
     saveDirEdit = new QLineEdit(initial.saveDirectory);
@@ -97,5 +104,6 @@ Config SettingsDialog::config() const {
     c.textFontSize = fontSizeSpin->value();
     c.textBackground = textBackground;
     c.saveDirectory = saveDirEdit->text();
+    c.classicToolbar = toolbarStyleCombo->currentIndex() == 1;
     return c;
 }

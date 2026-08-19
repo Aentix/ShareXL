@@ -10,6 +10,7 @@ struct Config {
     int textFontSize = 18;
     QColor textBackground{Qt::transparent};
     QString saveDirectory;
+    bool classicToolbar = false;
 
     static Config load();
     void save() const;

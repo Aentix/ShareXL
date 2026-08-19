@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Gui DBus Network)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Gui DBus Network Svg)
 find_package(LayerShellQt)
 
 add_executable(sharexl
@@ -26,7 +26,7 @@ add_executable(sharexl
 
 target_include_directories(sharexl PRIVATE src)
 
-target_link_libraries(sharexl PRIVATE Qt6::Widgets Qt6::Gui Qt6::DBus Qt6::Network)
+target_link_libraries(sharexl PRIVATE Qt6::Widgets Qt6::Gui Qt6::DBus Qt6::Network Qt6::Svg)
 
 if(LayerShellQt_FOUND)
     target_compile_definitions(sharexl PRIVATE HAVE_LAYERSHELLQT)

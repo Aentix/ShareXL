@@ -1,5 +1,24 @@
 <RCC>
     <qresource prefix="/">
         <file>sharexl.png</file>
+        <file>icons/mouse-pointer-2.svg</file>
+        <file>icons/pencil.svg</file>
+        <file>icons/highlighter.svg</file>
+        <file>icons/arrow-right.svg</file>
+        <file>icons/square.svg</file>
+        <file>icons/droplet.svg</file>
+        <file>icons/type.svg</file>
+        <file>icons/undo-2.svg</file>
+        <file>icons/redo-2.svg</file>
+        <file>icons/circle.svg</file>
+        <file>icons/minus.svg</file>
+        <file>icons/spline.svg</file>
+        <file>icons/hash.svg</file>
+        <file>icons/message-square.svg</file>
+        <file>icons/crop.svg</file>
+        <file>icons/rotate-ccw.svg</file>
+        <file>icons/rotate-cw.svg</file>
+        <file>icons/flip-horizontal-2.svg</file>
+        <file>icons/flip-vertical-2.svg</file>
     </qresource>
 </RCC>

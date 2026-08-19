@@ -68,3 +68,4 @@ on wayland, the first time it runs you'll get one or two permission prompts (scr
 
 - [ShareX](https://github.com/ShareX/ShareX) — this whole project is a linux-native homage to it. not affiliated with the original, just inspired by it
 - [Catbox](https://catbox.moe) — the anonymous file host the upload feature uses
+- [Lucide](https://lucide.dev) — the toolbar icon set (ISC license)

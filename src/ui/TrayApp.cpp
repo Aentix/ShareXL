@@ -147,14 +147,12 @@ void TrayApp::onCaptured(const QImage &image) {
 
     activeOverlays = new QVector<OverlayWindow *>();
 
-    bool first = true;
     for (QScreen *screen : screens) {
         const QPoint offset = screen->geometry().translated(-unionRect.topLeft()).topLeft();
-        auto *overlay = new OverlayWindow(session, offset, first);
+        auto *overlay = new OverlayWindow(session, offset, true, false, config.classicToolbar);
         placeOnScreen(overlay, screen);
         activeOverlays->append(overlay);
         overlay->show();
-        first = false;
     }
 
     connect(session, &SessionState::savedTo, this, &TrayApp::recordHistory);
